@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio(Education)</title>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&family=Lobster&family=Roboto+Slab&display=swap"
+        rel="stylesheet">
+    <style>
+        @media screen and (max-width:500px) {
+
+            /* HEADER SECTION */
+            .heading {
+                font-size: 20px;
+                font-family: 'Roboto Slab', serif;
+                background-color: whitesmoke;
+                color: rgb(0, 0, 0);
+                position: relative;
+                margin: auto;
+                padding: 11px;
+            }
+
+            /* This is the hamburger section */
+            .overlay {
+                height: 100%;
+                width: 0;
+                position: fixed;
+                z-index: 1;
+                top: 0;
+                left: 0;
+                background-color: rgb(0, 0, 0);
+                background-color: rgba(74, 116, 118, 0.7);
+                ;
+                overflow-x: hidden;
+                transition: 0.5s;
+            }
+
+            .overlay-content {
+                position: relative;
+                top: 25%;
+                width: 100%;
+                text-align: center;
+                margin-top: 30px;
+            }
+
+            .overlay a {
+                padding: 8px;
+                text-decoration: none;
+                font-size: 25px;
+                color: whitesmoke;
+                font-family: 'Roboto', sans-serif;
+                display: block;
+                transition: 0.5s;
+                font-style: italic;
+            }
+
+            .overlay a:hover,
+            .overlay a:focus {
+                color: #f1f1f1;
+
+            }
+
+            .overlay .closebtn {
+                position: absolute;
+                top: 20px;
+                right: 45px;
+                font-size: 60px;
+            }
+
+            .ham {
+                float: right;
+                font-weight: bold;
+                font-family: 'Roboto Slab', serif;
+                position: relative;
+                top: -4px;
+            }
+
+            /* Education & certificate title section */
+            .edu_cer {
+                color: whitesmoke;
+                font-family: 'Roboto Slab', serif;
+                font-size: 20px;
+                text-align: center;
+            }
+
+            .div_edu {
+                line-height: 8px;
+                padding: 10px;
+            }
+
+            .title1 {
+                color: whitesmoke;
+                font-family: 'Roboto Slab', serif;
+                font-size: 20px;
+            }
+
+            .branch {
+                color: whitesmoke;
+                font-family: 'Roboto Slab', serif;
+                font-size: 14px;
+                font-style: italic;
+            }
+
+            .from,
+            .session {
+                color: whitesmoke;
+                font-family: 'Roboto Slab', serif;
+                font-size: 14px;
+                font-style: italic;
+            }
+
+            .stars {
+                font-family: 'Roboto Slab', serif;
+                font-size: 15px;
+            }
+
+            
+
+            /* Scroll Animation Starting point */
+
+            /* This is for My education title */
+            #scroll_animation_title1 {
+                opacity: 0;
+                animation-name: fade_in_title1;
+                animation-duration: 1s;
+                animation-delay: 0.5s;
+                animation-fill-mode: forwards;
+            }
+
+            @keyframes fade_in_title1 {
+                from {
+                    opacity: 0;
+                    transform: translateX(200px)
+                }
+
+                to {
+                    opacity: 1;
+                    transform: translateX(0);
+                }
+            }
+
+            /* For degree 1 */
+            #scroll_animation_degrees1 {
+                opacity: 0;
+                animation-name: fade_in_degrees1;
+                animation-duration: 1s;
+                animation-delay: 1s;
+                animation-fill-mode: forwards;
+            }
+
+            @keyframes fade_in_degrees1 {
+                from {
+                    opacity: 0;
+                    transform: translateY(200px);
+                }
+
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+
+            /* For degree 2 */
+            #scroll_animation_degrees2 {
+                opacity: 0;
+                animation-name: fade_in_degrees2;
+                animation-duration: 1s;
+                animation-delay: 2s;
+                animation-fill-mode: forwards;
+            }
+
+            @keyframes fade_in_degrees2 {
+                from {
+                    opacity: 0;
+                    transform: translateY(200px);
+                }
+
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+
+            /* For degree 3 */
+            #scroll_animation_degrees3 {
+                opacity: 0;
+                animation-name: fade_in_degrees3;
+                animation-duration: 1s;
+                animation-delay: 3s;
+                animation-fill-mode: forwards;
+            }
+
+            @keyframes fade_in_degrees3 {
+                from {
+                    opacity: 0;
+                    transform: translateY(200px);
+                }
+
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+
+            /* For degree 4 */
+            #scroll_animation_degrees4 {
+                opacity: 0;
+                animation-name: fade_in_degrees4;
+                animation-duration: 1s;
+                animation-delay: 4s;
+                animation-fill-mode: forwards;
+            }
+
+            @keyframes fade_in_degrees4 {
+                from {
+                    opacity: 0;
+                    transform: translateY(200px);
+                }
+
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+
+            /* This is for My Certification title */
+            #scroll_animation_title2 {
+                opacity: 0;
+                animation-name: fade_in_title2;
+                animation-duration: 1s;
+                animation-delay: 5s;
+                animation-fill-mode: forwards;
+            }
+
+            @keyframes fade_in_title2 {
+                from {
+                    opacity: 0;
+                    transform: translateX(200px);
+                }
+
+                to {
+                    opacity: 1;
+                    transform: translateX(0);
+                }
+            }
+
+            /* Animation for all certification */
+            #scroll_ani_cer {
+                opacity: 0;
+                animation-name: fade_in_cer;
+                animation-duration: 1s;
+                animation-delay: 5s;
+                animation-fill-mode: forwards;
+            }
+
+            @keyframes fade_in_cer {
+                from {
+                    opacity: 0;
+                    transform: translateY(50px);
+                }
+
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+
+            /* The footer section */
+            .footer_div {
+                position: relative;
+                margin: auto;
+                background-color: rgba(95, 158, 160, 0.4);
+                padding: 15px;
+            }
+            .my_resume{
+                background-color: #1f6f8b;
+                font-family: 'Roboto Slab', serif;
+                font-size: 20px;
+                text-align: center;
+                padding: 10px;
+                width: 50%;
+                position: relative;
+                margin: auto;
+                border-radius: 25px;
+            }
+            .my_resume a{
+                text-decoration: none;
+                color: whitesmoke;
+            }
+
+            .contact_me {
+                color: white;
+                font-family: 'Roboto Slab', serif;
+                font-size: 18px;
+                padding: 10px 0px 0px 0px;
+                text-align: center;
+            }
+
+            .mobile_email {
+                color: white;
+                font-family: 'Roboto', sans-serif;
+                font-size: 15px;
+                padding: 5px;
+                text-align: center;
+            }
+
+            .address {
+                line-height: 22px;
+            }
+
+            .follow_me {
+                color: white;
+                font-family: 'Roboto Slab', serif;
+                font-size: 18px;
+                padding: 5px 5px 0px 5px;
+                text-align: center;
+            }
+
+            .social_media_logos {
+                width: 30%;
+                position: relative;
+                margin: auto;
+                padding: 15px;
+            }
+
+            .copyright {
+                color: white;
+                font-family: 'Roboto', sans-serif;
+                font-size: 15px;
+                text-align: center;
+                
+            }
+
+            /* back to the top button section */
+            #myBtn {
+                display: none;
+                position: fixed;
+                bottom: 20px;
+                right: 30px;
+                z-index: 99;
+                font-size: 18px;
+                border: none;
+                outline: none;
+                background-color: rgb(184, 50, 50);
+                color: white;
+                cursor: pointer;
+                padding: 15px;
+                border-radius: 7px;
+            }
+
+            #myBtn:hover {
+                background-color: #555;
+            }
+        }
+    </style>
+</head>
+
+<body style="background-color: #1b1f24;">
+    <!-- This is the header line -->
+    <div class="heading">
+        My Portfolio
+        <span style="font-size:25px;cursor:pointer" onclick="openNav()" class="ham">&#9776;</span>
+        <!--the button of hamburger-->
+    </div>
+
+    <!-- This is the hamburger section -->
+    <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="overlay-content">
+            <a href="/index.html">Home</a>
+            <a href="/educations.html">Education</a>
+            <a href="/skills.html">Skills</a>
+            <a href="/projects.html">Projects</a>
+            <a href="/about.html">About</a>
+        </div>
+    </div>
+
+    <!-- The education title section -->
+    <div class="edu_cer">
+        <p id="scroll_animation_title1">&#128304; My Education &#128304;</p>
+    </div>
+    <hr>
+    <!-- All educations starts from here -->
+    <div class="div_edu" id="scroll_animation_degrees1">
+        <p class="title1">&#x2705; Bachelor of Technology</p>
+        <p class="branch">Branch: Electronics & Comm. Engineering</p>
+        <p class="from">From Jalpaiguri Govt. Engg. College</p>
+        <p class="session">Session: 2017 to 2020</p>
+        <p class="stars">&#x2B50; &#x2B50; &#x2B50; &#x2B50;</p>
+    </div>
+
+    <div class="div_edu" id="scroll_animation_degrees2">
+        <p class="title1">&#x2705; Diploma in Engineering</p>
+        <p class="branch">Branch: Electronics & Tele-Comm. Engineering</p>
+        <p class="from">From Siliguri Govt. Polytechnic</p>
+        <p class="session">Session: 2014 to 2017</p>
+        <p class="stars">&#x2B50; &#x2B50; &#x2B50; &#x2B50; &#x2B50;</p>
+    </div>
+
+    <div class="div_edu" id="scroll_animation_degrees3">
+        <p class="title1">&#x2705; H.S. Examination</p>
+        <p class="branch">Branch: Science</p>
+        <p class="from">From Matigara Harasundar (H.S.) School</p>
+        <p class="session">Session: 2011 to 2013</p>
+        <p class="stars">&#x2B50; &#x2B50; &#x2B50; &#x2B50;</p>
+    </div>
+
+    <div class="div_edu" id="scroll_animation_degrees4">
+        <p class="title1">&#x2705; Madhyamik Examination</p>
+        <p class="branch">Branch: All Subjects</p>
+        <p class="from">From Matigara Harasundar (H.S.) School</p>
+        <p class="session">Session: 2009 to 2011</p>
+        <p class="stars">&#x2B50; &#x2B50; &#x2B50; &#x2B50;</p>
+    </div>
+
+    <!-- My all certification section -->
+    <div class="edu_cer">
+        <p id="scroll_animation_title2">&#128304; My Certification &#128304;</p>
+    </div>
+    <hr>
+    <div class="div_edu" id="scroll_ani_cer">
+        <p class="title1">&#129351; Computer Application</p>
+        <p class="from">From WBSCT&VE&SD, 2017</p>
+    </div>
+
+    <div class="div_edu" id="scroll_ani_cer">
+        <p class="title1">&#129351; Web Development</p>
+        <p class="from">From Cursa, 2022</p>
+    </div>
+
+    <div class="div_edu" id="scroll_ani_cer">
+        <p class="title1">&#129351; MySQL Database</p>
+        <p class="from">From Cursa, 2022</p>
+    </div>
+
+    <div class="div_edu" id="scroll_ani_cer">
+        <p class="title1">&#129351; Embedded System</p>
+        <p class="from">From HOMET Solutions, 2018</p>
+    </div>
+
+    <div class="div_edu" id="scroll_ani_cer">
+        <p class="title1">&#129351; Arduino Programming</p>
+        <p class="from">From Cursa, 2020</p>
+    </div>
+
+    <!-- Back to the top button -->
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+    <!-- The footer image -->
+    <div class="footer_div">
+        <p class="my_resume"><a href="https://drive.google.com/file/d/1upJbnOykl4fsE6eim8qPbm5Vc7q5xu5C/view?usp=share_link">My Resume &#11015;</a></p>
+        <div class="contact_me">
+            CONTACT ME:
+        </div>
+        <hr>
+        <div class="mobile_email">
+            <span class="address">Matigara Govt. Colony<br>Matigara, Siliguri<br>PIN: 734010</span><br><br>
+            &#128222; +91 7602220806<br>&#128233; arunpaul36@gmail.com
+        </div>
+        <div class="follow_me">
+            FOLLOW ME
+        </div>
+        <div class="social_media_logos">
+            <img src="images/facebook_logo.png" alt="facebook" width="30%" onclick="openfacebook()">
+            <img src="images/instagram_logo.png" alt="instagram" width="30%" onclick="openinstagram()">
+            <img src="images/twitter_logo.png" alt="twitter" width="30%" onclick="opentwitter()">
+        </div>
+        <div class="copyright">
+            <span class="address">&#169; 2023, All Rights Reserved.<br>Made By: Arun Paul.</span>
+        </div>
+
+
+
+    <script>
+        // This is the hamburger section
+        function openNav() {
+            document.getElementById("myNav").style.width = "70%";
+        }
+
+        function closeNav() {
+            document.getElementById("myNav").style.width = "0%";
+        }
+
+        //for facebook
+        function openfacebook(){
+            window.open("https://www.facebook.com/profile.php?id=100005144882718","_parent");
+        }
+
+        //for instagram
+        function openinstagram(){
+            window.open("https://www.instagram.com/arunpaul5477/","_parent");
+        }
+
+        //for twitter
+        function opentwitter(){
+            window.open("https://www.linkedin.com/in/arun-paul-b2a743258/","_parent");
+        }
+
+        //Back to the top button JS
+        // Get the button
+        let mybutton = document.getElementById("myBtn");
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }        
+
+    </script>
+</body>
+
+</html>

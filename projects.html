@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio(Projects)</title>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&family=Lobster&family=Roboto+Slab&display=swap"
+        rel="stylesheet">
+    <style>
+        @media screen and (max-width:500px) {
+
+            /* HEADER SECTION */
+            .heading {
+                font-size: 20px;
+                font-family: 'Roboto Slab', serif;
+                background-color: whitesmoke;
+                color: rgb(0, 0, 0);
+                position: relative;
+                margin: auto;
+                padding: 11px;
+            }
+
+            /* This is the hamburger section */
+            .overlay {
+                height: 100%;
+                width: 0;
+                position: fixed;
+                z-index: 1;
+                top: 0;
+                left: 0;
+                background-color: rgb(0, 0, 0);
+                background-color: rgba(74, 116, 118, 0.7);
+                overflow-x: hidden;
+                transition: 0.5s;
+            }
+
+            .overlay-content {
+                position: relative;
+                top: 25%;
+                width: 100%;
+                text-align: center;
+                margin-top: 30px;
+            }
+
+            .overlay a {
+                padding: 8px;
+                text-decoration: none;
+                font-size: 25px;
+                color: whitesmoke;
+                font-family: 'Roboto', sans-serif;
+                display: block;
+                transition: 0.5s;
+                font-style: italic;
+            }
+
+            .overlay a:hover,
+            .overlay a:focus {
+                color: #f1f1f1;
+
+            }
+
+            .overlay .closebtn {
+                position: absolute;
+                top: 20px;
+                right: 45px;
+                font-size: 60px;
+            }
+
+            .ham {
+                float: right;
+                font-weight: bold;
+                font-family: 'Roboto Slab', serif;
+                position: relative;
+                top: -4px;
+            }
+
+            /* My project section */
+            .my_project {
+                color: whitesmoke;
+                font-family: 'Roboto Slab', serif;
+                font-size: 20px;
+                text-align: center;
+            }
+
+            .title1 {
+                position: relative;
+                color: whitesmoke;
+                font-size: 20px;
+                font-family: 'Roboto Slab', serif;
+            }
+
+            .about {
+                color: whitesmoke;
+                font-family: 'Roboto', sans-serif;
+                font-size: 15px;
+                text-align: center;
+                font-style: italic;
+            }
+
+            /* div 3 section */
+            .div3 {
+                width: 70%;
+                position: relative;
+                margin: auto;
+            }
+
+            .visit_text {
+                color: whitesmoke;
+                font-size: 25px;
+                text-align: center;
+                font-family: 'Roboto Slab', serif;
+            }
+
+            .facebook_page {
+                background-color: rgb(29, 118, 182);
+                font-family: 'Roboto', sans-serif;
+                font-size: 25px;
+                font-style: italic;
+                text-align: center;
+                padding: 8px;
+                border-top-right-radius: 20px;
+                border-bottom-left-radius: 20px;
+
+            }
+
+            .facebook_page:hover {
+                background-color: #1b1f24;
+                border: 1px solid rgb(29, 118, 182);
+                transition-duration: 0.5s;
+            }
+
+            .facebook_page a {
+                text-decoration: none;
+                color: whitesmoke;
+            }
+
+            /* The footer section */
+            .footer_div {
+                position: relative;
+                margin: auto;
+                background-color: rgba(95, 158, 160, 0.4);
+                padding: 15px;
+            }
+
+            .my_resume {
+                background-color: #1f6f8b;
+                font-family: 'Roboto Slab', serif;
+                font-size: 20px;
+                text-align: center;
+                padding: 10px;
+                width: 50%;
+                position: relative;
+                margin: auto;
+                border-radius: 25px;
+            }
+
+            .my_resume a {
+                text-decoration: none;
+                color: whitesmoke;
+            }
+
+            .contact_me {
+                color: white;
+                font-family: 'Roboto Slab', serif;
+                font-size: 18px;
+                padding: 10px 0px 0px 0px;
+                text-align: center;
+            }
+
+            .mobile_email {
+                color: white;
+                font-family: 'Roboto', sans-serif;
+                font-size: 15px;
+                padding: 5px;
+                text-align: center;
+            }
+
+            .address {
+                line-height: 22px;
+            }
+
+            .follow_me {
+                color: white;
+                font-family: 'Roboto Slab', serif;
+                font-size: 18px;
+                padding: 5px 5px 0px 5px;
+                text-align: center;
+            }
+
+            .social_media_logos {
+                width: 30%;
+                position: relative;
+                margin: auto;
+                padding: 15px;
+            }
+
+            .copyright {
+                color: white;
+                font-family: 'Roboto', sans-serif;
+                font-size: 15px;
+                text-align: center;
+
+            }
+
+            /* The animation section starts here */
+            #scroll_animation_title1 {
+                opacity: 0;
+                animation-name: fade_in_title1;
+                animation-duration: 1s;
+                animation-delay: 0.5s;
+                animation-fill-mode: forwards;
+            }
+
+            @keyframes fade_in_title1 {
+                from {
+                    opacity: 0;
+                    transform: translateX(200px);
+                }
+
+                to {
+                    opacity: 1;
+                    transform: translateX(0);
+                }
+            }
+
+
+
+            /* back to the top button section */
+            #myBtn {
+                display: none;
+                position: fixed;
+                bottom: 20px;
+                right: 30px;
+                z-index: 99;
+                font-size: 18px;
+                border: none;
+                outline: none;
+                background-color: rgb(184, 50, 50);
+                color: white;
+                cursor: pointer;
+                padding: 15px;
+                border-radius: 7px;
+            }
+
+            #myBtn:hover {
+                background-color: #555;
+            }
+
+        }
+    </style>
+</head>
+
+<body style="background-color: #1b1f24;">
+    <!-- This is the header line -->
+    <div class="heading">
+        My Portfolio
+        <span style="font-size:25px;cursor:pointer" onclick="openNav()" class="ham">&#9776;</span>
+        <!--the button of hamburger-->
+    </div>
+
+    <!-- This is the hamburger section -->
+    <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="overlay-content">
+            <a href="/index.html">Home</a>
+            <a href="/educations.html">Education</a>
+            <a href="/skills.html">Skills</a>
+            <a href="/projects.html">Projects</a>
+            <a href="/about.html">About</a>
+        </div>
+    </div>
+
+    <!-- My project title section -->
+    <div class="my_project">
+        <p id="scroll_animation_title1"><span id="my_project_emoji">&#128304;</span> My Projects &#128304;</p>
+    </div>
+    <hr>
+
+    <!-- My project details -->
+    <p class="title1">&#9989; Portfolio Website</p>
+    <p class="about">***In this website i describe about myself. My eduction, skills, projects and my personal
+        information are given in thsi site. Also i attached my resume which helps you to have a record about myself.</p>
+
+    <img src="images/project_porfolio.jpg" alt="portfolio" width="100%">
+
+    <p class="title1">&#9989; Bakery Website</p>
+
+    <p class="about">***After my own portfolio website, i was working on a bakery website for closed one. In this site i
+        give all the information about his bakery. All beautifull delicious cakes pictures are also shown in the gallery
+        where you can choose one to give a order by whatsapp.</p>
+        <img src="images/project_cake.jpg" alt="cake" width="100%">
+
+    <p class="title1">&#9989; Smart Blind Stick</p>
+
+    <p class="about">***During my B-tech, I was working on my final year project, Named Smart Blind Stick. This stick
+        will the blind person to reach the destination where he/she whats to go. We are using different types of sensor
+        to make it.</p>
+        <img src="images/project_smartstick.jpg" alt="smartstick" width="100%">
+
+    <p class="title1">&#9989; BT Control System</p>
+
+    <p class="about">***During my diploma engineering, My final year project was BT control home automation system. By
+        using thsi system anyone can control his home appliances by using smart phone. </p>
+        <img src="images/project_bt.jpg" alt="btcontrol" width="100%">
+
+    <p class="about">&#11088; &#11088; &#11088; Currently i am working on different kind of website projects using html,
+        css and js. Also doing many kind of projects on Arduino development board.</p>
+
+    <!-- My facebook page section -->
+    <div class="div3">
+        <p class="visit_text">Facebook Page</p>
+        <p class="facebook_page"><a href="https://www.facebook.com/profile.php?id=100005144882718">facebook</a></p>
+    </div>
+
+    <div class="div3">
+        <p class="visit_text">Linkedin Page</p>
+        <p class="facebook_page"><a href="https://www.linkedin.com/in/arun-paul-b2a743258/">linkedin</a></p>
+    </div>
+
+    <!-- Back to the top button -->
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+    <!-- The footer image -->
+    <div class="footer_div">
+        <p class="my_resume"><a href="https://drive.google.com/file/d/1upJbnOykl4fsE6eim8qPbm5Vc7q5xu5C/view?usp=share_link">My Resume &#11015;</a></p>
+        <div class="contact_me">
+            CONTACT ME:
+        </div>
+        <hr>
+        <div class="mobile_email">
+            <span class="address">Matigara Govt. Colony<br>Matigara, Siliguri<br>PIN: 734010</span><br><br>
+            &#128222; +91 7602220806<br>&#128233; arunpaul36@gmail.com
+        </div>
+        <div class="follow_me">
+            FOLLOW ME
+        </div>
+        <div class="social_media_logos">
+            <img src="images/facebook_logo.png" alt="facebook" width="30%" onclick="openfacebook()">
+            <img src="images/instagram_logo.png" alt="instagram" width="30%" onclick="openinstagram()">
+            <img src="images/twitter_logo.png" alt="twitter" width="30%" onclick="opentwitter()">
+        </div>
+        <div class="copyright">
+            <span class="address">&#169; 2023, All Rights Reserved.<br>Made By: Arun Paul.</span>
+        </div>
+    </div>
+
+
+
+
+
+    <script>
+        // This is the hamburger section
+        function openNav() {
+            document.getElementById("myNav").style.width = "70%";
+        }
+
+        function closeNav() {
+            document.getElementById("myNav").style.width = "0%";
+        }
+
+        //for facebook
+        function openfacebook(){
+            window.open("https://www.facebook.com/profile.php?id=100005144882718","_parent");
+        }
+
+        //for instagram
+        function openinstagram(){
+            window.open("https://www.instagram.com/arunpaul5477/","_parent");
+        }
+
+        //for twitter
+        function opentwitter(){
+            window.open("https://www.linkedin.com/in/arun-paul-b2a743258/","_parent");
+        }
+
+        //Back to the top button JS
+        // Get the button
+        let mybutton = document.getElementById("myBtn");
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+
+    </script>
+</body>
+
+</html>
